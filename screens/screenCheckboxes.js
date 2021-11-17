@@ -4,11 +4,9 @@ import React, { useState } from 'react';
 import MyContext from '../context/context.js'
 
 
-
 export default function screenCheckboxes({ navigation }) {
 
   const { isEnabled, setIsEnabled } = React.useContext(MyContext);
-
   const toggleSwitch = () => setIsEnabled(previousState => !previousState);
 
   return (
