@@ -1,7 +1,13 @@
 import { StyleSheet, Image, Text, View } from 'react-native';
-import React from 'react';
+import React, { useState } from 'react';
 
+import MyContext from '../context/context.js'
 export default function screenTeeth({ navigation }) {
+
+  const { isEnabled, setIsEnabled } = React.useContext(MyContext);
+
+  console.log(isEnabled)
+  
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Text>Hello from Teeth Screen</Text>
@@ -15,6 +21,5 @@ export default function screenTeeth({ navigation }) {
 const styles = StyleSheet.create({
   teethImage: {
     width: 50,
-    scale: 100,
   },
 });
