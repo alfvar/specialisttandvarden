@@ -6,7 +6,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React from 'react';
 
 export default function screenHome({ navigation }) {
-  
+
   global.userName = "User"
 
   return (
@@ -17,11 +17,19 @@ export default function screenHome({ navigation }) {
         }}>
         <Text>Tänder!</Text>
       </TouchableOpacity>
+
       <TouchableOpacity
         onPress={() => {
           navigation.navigate('screenCheckboxes');
         }}>
         <Text>Checkbox-skärm</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity
+        onPress={() => {
+          navigation.navigate('screenKariesFlow');
+        }}>
+        <Text>karies-flow</Text>
       </TouchableOpacity>
     </View>
 

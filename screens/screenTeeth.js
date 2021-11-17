@@ -15,10 +15,6 @@ export default function screenTeeth({ navigation }) {
       <Text>Hello from Teeth Screen</Text>
       <Image source={require('../assets/teeth2.png')} style={styles.teethImage}
       />
-      <Slider
-        value={this.state.value}
-        onValueChange={value => this.setState({ value })}
-      />
 
     </View>
   );
