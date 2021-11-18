@@ -4,12 +4,9 @@ import { StyleSheet, Image, Text, View } from 'react-native';
 import { Slider } from '@miblanchard/react-native-slider';
 import MyContext from '../context/context.js'
 
-
 export default function screenTeeth({ navigation }) {
+  const { styles } = React.useContext(MyContext);
 
-  const { isEnabled, setIsEnabled } = React.useContext(MyContext);
-
-  console.log(isEnabled)
 
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>

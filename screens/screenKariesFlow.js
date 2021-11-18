@@ -1,11 +1,11 @@
-import { StyleSheet, Image, Text, View } from 'react-native';
 import React, { useState } from 'react';
-import { Slider } from '@miblanchard/react-native-slider';
+import { StyleSheet, Image, Text, View } from 'react-native';
 
+import { Slider } from '@miblanchard/react-native-slider';
 import MyContext from '../context/context.js'
+
 export default function screenTeeth({ navigation }) {
 
-  const { isEnabled, setIsEnabled } = React.useContext(MyContext);
   let image = require('../assets/kariesFlow1.png')
   let kariesValue = 2
 
