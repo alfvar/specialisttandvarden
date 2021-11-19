@@ -9,6 +9,7 @@ import screenKariesFlow from './screens/screenKariesFlow';
 import screenInflamFlow from './screens/screenInflamFlow';
 import screenEgenvard from './screens/screenEgenvard';
 import screenSockerklocka from './screens/screenSockerklocka';
+import screenTeeth from './screens/screenTeeth';
 
 import { MyProvider } from './context/context.js'
 
@@ -24,6 +25,7 @@ export default function App() {
           <Stack.Screen name="screenInflamFlow" component={screenInflamFlow} />
           <Stack.Screen name="screenEgenvard" component={screenEgenvard} />
           <Stack.Screen name="screenSockerklocka" component={screenSockerklocka} />
+          <Stack.Screen name="screenTeeth" component={screenTeeth} />
 
         </Stack.Navigator>
       </NavigationContainer>

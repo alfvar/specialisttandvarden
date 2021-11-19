@@ -39,6 +39,13 @@ export default function screenHome({ navigation }) {
         <Text style={styles.header}>Sockerklocka</Text>
       </TouchableOpacity>
 
+      <TouchableOpacity
+        onPress={() => {
+          navigation.navigate('screenTeeth');
+        }}>
+        <Text style={styles.header}>screenTeeth</Text>
+      </TouchableOpacity>
+
     </View>
 
   );

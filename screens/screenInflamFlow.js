@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { StyleSheet, Image, Text, View } from 'react-native';
 
-import { Slider } from '@miblanchard/react-native-slider';
 import MyContext from '../context/context.js'
 
 
