@@ -3,8 +3,8 @@ import { StyleSheet, Image, Text, View } from 'react-native';
 
 import MyContext from '../context/context.js'
 
-
 export default function screenTeeth({ navigation }) {
+  const { styles } = React.useContext(MyContext);
 
   const { isEnabled, setIsEnabled } = React.useContext(MyContext);
 

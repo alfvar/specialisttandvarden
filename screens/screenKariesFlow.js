@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 import { StyleSheet, Image, Text, View } from 'react-native';
+import Slider from '@react-native-community/slider';
 
 import MyContext from '../context/context.js'
 
 export default function screenTeeth({ navigation }) {
+  const { styles } = React.useContext(MyContext);
 
+  const [sliderValue, setSliderValue] = useState(15);
   let image = require('../assets/kariesFlow1.png')
   let kariesValue = 2
 
@@ -22,19 +25,23 @@ export default function screenTeeth({ navigation }) {
   }
 
 
-
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Text>Hello from Teeth Screen</Text>
-      <Image source={image} style={styles.teethImage}
+      <Image source={image} style={styles.Image}
+      />
+
+      <Slider
+        maximumValue={100}
+        minimumValue={0}
+        minimumTrackTintColor="#307ecc"
+        maximumTrackTintColor="#000000"
+        step={1}
+        value={sliderValue}
+        onValueChange={(sliderValue) => setSliderValue(sliderValue)}
       />
 
     </View>
   );
 };
 
-const styles = StyleSheet.create({
-  teethImage: {
-    width: 50,
-  },
-});
