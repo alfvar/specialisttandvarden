@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { StyleSheet } from 'react-native';
 
 const MyContext = React.createContext()
@@ -6,19 +6,42 @@ const MyContext = React.createContext()
 export const MyProvider = ({ children }) => {
 
     const [isEnabled, setIsEnabled] = React.useState(false);
+    const [kariesValue, setkariesValue] = useState(1);
+    const [inflamValue, setinflamValue] = useState(1);
+    let defaultTeethImage = require('../assets/teeth2.png')
+
     const styles = StyleSheet.create({
         image: {
-            width: 400,
+            flex: 1,
+            justifyContent: 'center',
+            alignItems: 'center',
+            resizeMode: "contain",
+            width: 200,
         },
         header: {
             fontWeight: 'bold',
             lineHeight: 64,
             fontSize: 28,
         },
+        container: {
+            flex: 1,
+            alignItems: 'center',
+            justifyContent: 'center'
+        },
+        slider: {
+            flex: 1,
+            justifyContent: 'center' ,
+            width: 300,
+        }
     });
     return (
         <MyContext.Provider value={{
-            isEnabled, setIsEnabled, styles
+            isEnabled, setIsEnabled,
+            styles,
+            kariesValue, setkariesValue,
+            inflamValue, setinflamValue,
+            defaultTeethImage
+
         }}>
             {children}
         </MyContext.Provider>

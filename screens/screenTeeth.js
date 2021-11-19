@@ -9,7 +9,6 @@ export default function screenTeeth({ navigation }) {
   const { isEnabled, setIsEnabled } = React.useContext(MyContext);
   //const App = () => {
     const [sliderValue, setSliderValue] = useState(15);
-    console.log(isEnabled)
 
 
 
