@@ -5,11 +5,12 @@ import MyContext from '../context/context.js'
 
 export default function screenTeeth({ navigation }) {
   const { styles } = React.useContext(MyContext);
+  const { sockerklockaImage } = React.useContext(MyContext);
 
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+    <View style={styles.container}>
       <Text>Detta är en sockerklocka</Text>
-      <Image source={require('../assets/sockerklocka.png')} style={styles.image}
+      <Image source={sockerklockaImage} style={styles.image}
       />
 
     </View>
