@@ -30,7 +30,7 @@ export default function screenTeeth({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.container}>
-        <Image source={image} style={styles.image} />
+        <Image source={image} style={styles.singleToothImage} />
       </View>
 
       <View style={styles.slider}>

@@ -12,6 +12,10 @@ export const MyProvider = ({ children }) => {
     let sockerklockaImage = require('../assets/sockerklocka.png')
     let egenvardImage = require('../assets/egenvard.png')
 
+    let iconKariesFlow = require('../assets/icons/kariesIcon.png')
+    let iconInflamFlow = require('../assets/icons/inflamIcon.png')
+    let iconEgenvard = require('../assets/icons/egenvardIcon.png')
+    let iconSockerklocka = require('../assets/icons/sockerklockaIcon.png')
 
     const styles = StyleSheet.create({
         image: {
@@ -19,7 +23,17 @@ export const MyProvider = ({ children }) => {
             justifyContent: 'center',
             alignItems: 'center',
             resizeMode: "contain",
-            width: 200,
+            width: 300,
+        },
+
+        singleToothImage: {
+            flex: 1,
+            justifyContent: 'center',
+            alignItems: 'center',
+            resizeMode: "contain",
+            width: 700,
+            marginTop: 50,
+
         },
         header: {
             fontWeight: 'bold',
@@ -29,12 +43,23 @@ export const MyProvider = ({ children }) => {
         container: {
             flex: 1,
             alignItems: 'center',
-            justifyContent: 'center'
+            justifyContent: 'center',
+            backgroundColor: "skyblue",
         },
         slider: {
+            flex: 0.5,
+            justifyContent: 'center',
+            width: "70%",
+        },
+        icon: {
             flex: 1,
-            justifyContent: 'center' ,
-            width: 300,
+            justifyContent: 'center',
+            alignItems: 'center',
+            resizeMode: "contain",
+            width: 150,
+            height: 150,
+            margin: 20,
+
         }
     });
     return (
@@ -45,7 +70,12 @@ export const MyProvider = ({ children }) => {
             inflamValue, setinflamValue,
             defaultTeethImage,
             sockerklockaImage,
-            egenvardImage
+            egenvardImage,
+
+            iconKariesFlow,
+            iconInflamFlow,
+            iconEgenvard,
+            iconSockerklocka
         }}>
             {children}
         </MyContext.Provider>

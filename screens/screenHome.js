@@ -8,41 +8,58 @@ import MyContext from '../context/context.js'
 export default function screenHome({ navigation }) {
   const { styles } = React.useContext(MyContext);
   const { defaultTeethImage } = React.useContext(MyContext);
+
+  const { iconKariesFlow } = React.useContext(MyContext);
+  const { iconInflamFlow } = React.useContext(MyContext);
+  const { iconEgenvard } = React.useContext(MyContext);
+  const { iconSockerklocka } = React.useContext(MyContext);
+
+
   return (
     <View style={styles.container}>
-      <View style={styles.container}>
+      <View style={{ flex: 1 }}>
         <Image source={defaultTeethImage} style={styles.image} />
       </View>
-      <View style={{ flex: 1 }}>
+
+      <View style={{ flex: 1, flexDirection: "row" }}>
         <TouchableOpacity
+          style={{ flex: 1 }}
           onPress={() => {
-            navigation.navigate('screenKariesFlow');
+            navigation.navigate('Karies');
           }}>
-          <Text style={styles.header}>Karies-flow</Text>
+          <Image style={styles.icon} source={iconKariesFlow} />
         </TouchableOpacity>
 
         <TouchableOpacity
+          style={{ flex: 1 }}
+
           onPress={() => {
-            navigation.navigate('screenInflamFlow');
+            navigation.navigate('Tandköttsinflammation');
           }}>
-          <Text style={styles.header}>Inflammations-flow</Text>
+          <Image style={styles.icon} source={iconInflamFlow} />
         </TouchableOpacity>
 
         <TouchableOpacity
+          style={{ flex: 1 }}
+
           onPress={() => {
-            navigation.navigate('screenEgenvard');
+            navigation.navigate('Egenvård');
           }}>
-          <Text style={styles.header}>Egenvård</Text>
+          <Image style={styles.icon} source={iconEgenvard} />
         </TouchableOpacity>
 
         <TouchableOpacity
+          style={{ flex: 1 }}
+
           onPress={() => {
-            navigation.navigate('screenSockerklocka');
+            navigation.navigate('Sockerklocka');
           }}>
-          <Text style={styles.header}>Sockerklocka</Text>
+          <Image style={styles.icon} source={iconSockerklocka} />
         </TouchableOpacity>
 
-
+      </View>
+      <View style={{ flex: 0.5 }}>
+        <Text>  </Text>
       </View>
     </View>
 
