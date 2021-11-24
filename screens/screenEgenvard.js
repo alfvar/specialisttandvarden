@@ -1,29 +1,14 @@
 import React, { useRef, useState } from 'react';
-import { Dimensions, PanResponder, View, StyleSheet } from 'react-native';
+import { Dimensions, PanResponder, View, Text, StyleSheet } from 'react-native';
 import Svg, {
-  Circle,
-  Ellipse,
-  G,
-  Text,
-  TSpan,
-  TextPath,
-  Path,
-  Polygon,
   Polyline,
-  Line,
-  Rect,
   Use,
   Image,
-  Symbol,
   Defs,
-  LinearGradient,
-  RadialGradient,
-  Stop,
-  ClipPath,
-  Pattern,
   Mask,
 } from 'react-native-svg';
 
+import MyContext from '../context/context.js'
 
 const examplePath = [
   { x: 90, y: 300 },
@@ -31,19 +16,21 @@ const examplePath = [
 ];
 
 const GesturePath = ({ path, color }) => {
+  const { styles } = React.useContext(MyContext);
+  const { defaultTeethImage } = React.useContext(MyContext);
   const { width, height } = Dimensions.get('window');
   const points = path.map(p => `${p.x},${p.y}`).join(' ');
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Svg height="100%" width="60%" >
+    <View style={styles.container}>
+      <Svg height="100%" width="100%" style={{ flex: 1 }}>
         <Defs>
           <Mask
             id="Mask"
             maskUnits="userSpaceOnUse"
             x="0"
             y="0"
-            width={width}
-            height={height}
+            width="100%"
+            height="100%"
           >
             <Polyline
               id="Polyline"
@@ -61,7 +48,7 @@ const GesturePath = ({ path, color }) => {
             width='100%'
             height='100%'
             preserveAspectRatio="xMidYMid meet"
-            href={require('../assets/teeth2.png')}
+            href={defaultTeethImage}
           />
 
         </Defs>

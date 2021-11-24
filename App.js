@@ -1,4 +1,6 @@
 import React, { useState, Component } from 'react';
+import 'react-native-gesture-handler';
+
 import {
   AppRegistry,
   StyleSheet,
