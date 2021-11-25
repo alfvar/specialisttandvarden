@@ -8,22 +8,22 @@ export default function screenTeeth({ navigation }) {
   const { styles } = React.useContext(MyContext);
   const { kariesValue, setkariesValue } = React.useContext(MyContext);
 
-  let image = require('../assets/karies1.svg')
+  let image = require('../assets/karies1.png')
 
   if (kariesValue <= 5) {
-    image = require('../assets/karies1.svg')
+    image = require('../assets/karies1.png')
 
   } else if (kariesValue <= 10) {
 
-    image = require('../assets/karies2.svg')
+    image = require('../assets/karies2.png')
 
   } else if (kariesValue <= 15) {
 
-    image = require('../assets/karies3.svg')
+    image = require('../assets/karies3.png')
 
   } else if (kariesValue <= 20) {
 
-    image = require('../assets/karies4.svg')
+    image = require('../assets/karies4.png')
 
   }
 

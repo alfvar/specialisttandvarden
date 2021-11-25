@@ -16,16 +16,6 @@ export default function screenHome({ navigation }) {
 
   return (
     <View style={styles.container}>
-      <View style={{ flex: 0.5 }}>
-        <Image source={defaultTeethImage} style={{
-          flex: 1,
-          justifyContent: 'center',
-          alignItems: 'center',
-          resizeMode: "contain",
-          width: 300,
-          margin: 50,
-        }} />
-      </View>
 
       <View style={{ flex: 1, flexDirection: "row" }}>
         <TouchableOpacity
@@ -44,7 +34,8 @@ export default function screenHome({ navigation }) {
           }}>
           <Image style={styles.icon} source={iconInflamFlow} />
         </TouchableOpacity>
-
+      </View>
+      <View style={{ flex: 1, flexDirection: "row" }}>
         <TouchableOpacity
           style={{ flex: 1 }}
 
