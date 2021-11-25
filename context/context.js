@@ -28,11 +28,11 @@ export const MyProvider = ({ children }) => {
 
         singleToothImage: {
             flex: 1,
+            bottom: 0,
             justifyContent: 'center',
             alignItems: 'center',
             resizeMode: "contain",
             width: 700,
-            marginTop: 50,
 
         },
         header: {
@@ -55,9 +55,8 @@ export const MyProvider = ({ children }) => {
             flex: 1,
             justifyContent: 'center',
             alignItems: 'center',
-            resizeMode: "contain",
-            width: 150,
-            height: 150,
+            resizeMode: "cover",
+            width: 250,
             margin: 20,
 
         }

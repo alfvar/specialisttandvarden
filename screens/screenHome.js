@@ -14,11 +14,17 @@ export default function screenHome({ navigation }) {
   const { iconEgenvard } = React.useContext(MyContext);
   const { iconSockerklocka } = React.useContext(MyContext);
 
-
   return (
     <View style={styles.container}>
-      <View style={{ flex: 1 }}>
-        <Image source={defaultTeethImage} style={styles.image} />
+      <View style={{ flex: 0.5 }}>
+        <Image source={defaultTeethImage} style={{
+          flex: 1,
+          justifyContent: 'center',
+          alignItems: 'center',
+          resizeMode: "contain",
+          width: 300,
+          margin: 50,
+        }} />
       </View>
 
       <View style={{ flex: 1, flexDirection: "row" }}>
@@ -58,9 +64,7 @@ export default function screenHome({ navigation }) {
         </TouchableOpacity>
 
       </View>
-      <View style={{ flex: 0.5 }}>
-        <Text>  </Text>
-      </View>
+
     </View>
 
   );
