@@ -17,9 +17,9 @@ export default function screenHome({ navigation }) {
   return (
     <View style={styles.container}>
 
-      <View style={{ flex: 1, flexDirection: "row", justifyContent: 'center', alignItems: 'center', }}>
+      <View style={{ flex: 1, flexDirection: "row" }}>
         <TouchableOpacity
-          style={styles.iconContainer}
+          style={{ flex: 1 }}
           onPress={() => {
             navigation.navigate('Karies');
           }}>
@@ -27,14 +27,17 @@ export default function screenHome({ navigation }) {
         </TouchableOpacity>
 
         <TouchableOpacity
-          style={styles.iconContainer}
+          style={{ flex: 1 }}
+
           onPress={() => {
             navigation.navigate('Tandköttsinflammation');
           }}>
           <Image style={styles.icon} source={iconInflamFlow} />
         </TouchableOpacity>
+      </View>
+      <View style={{ flex: 1, flexDirection: "row" }}>
         <TouchableOpacity
-          style={styles.iconContainer}
+          style={{ flex: 1 }}
 
           onPress={() => {
             navigation.navigate('Egenvård');
@@ -43,7 +46,7 @@ export default function screenHome({ navigation }) {
         </TouchableOpacity>
 
         <TouchableOpacity
-          style={styles.iconContainer}
+          style={{ flex: 1 }}
 
           onPress={() => {
             navigation.navigate('Sockerklocka');
