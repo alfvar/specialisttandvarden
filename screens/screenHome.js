@@ -17,7 +17,7 @@ export default function screenHome({ navigation }) {
   return (
     <View style={styles.container}>
 
-      <View style={{ flex: 1, flexDirection: "row", justifyContent: 'center', alignItems: 'center', }}>
+      <View style={{ flex: 1, flexDirection: "row", justifyContent: 'center', alignItems: 'center', width: "100%"}}>
         <TouchableOpacity
           style={styles.iconContainer}
           onPress={() => {

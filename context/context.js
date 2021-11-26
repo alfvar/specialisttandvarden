@@ -42,6 +42,7 @@ export const MyProvider = ({ children }) => {
         },
         container: {
             flex: 1,
+            width:"100%",
             alignItems: 'center',
             justifyContent: 'center',
             backgroundColor: "skyblue",
@@ -56,7 +57,7 @@ export const MyProvider = ({ children }) => {
             alignItems: 'center',
             resizeMode: 'contain',
             height: "90%",
-            width: "90%",
+            width: "90%",   
             margin: 15,
 
 
@@ -65,7 +66,6 @@ export const MyProvider = ({ children }) => {
             flex: 1,
             justifyContent: 'center',
             alignItems: 'center',
-
             height: "40%",
 
 
