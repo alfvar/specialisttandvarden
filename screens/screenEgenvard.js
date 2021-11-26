@@ -37,7 +37,7 @@ const GesturePath = ({ path, color }) => {
               points={points}
               fill="none"
               stroke={color}
-              strokeWidth="50"
+              strokeWidth="100"
             />
           </Mask>
           <Image
@@ -59,7 +59,7 @@ const GesturePath = ({ path, color }) => {
           width='100%'
           height='100%'
           preserveAspectRatio="xMidYMid meet"
-          href={require('../assets/teethred.png')}
+          href={require('../assets/egenvard-dirty.png')}
         />
         <Use href="#img1" mask="url(#Mask)" />
       </Svg>

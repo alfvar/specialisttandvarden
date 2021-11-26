@@ -25,7 +25,15 @@ export default function screenTeeth({ navigation }) {
 
     image = require('../assets/karies4.png')
 
-  }
+  } else if (kariesValue <= 25) {
+
+    image = require('../assets/karies5.png')
+
+  } else if (kariesValue <= 30) {
+
+    image = require('../assets/karies6.png')
+
+  } 
 
   return (
     <View style={styles.container}>
@@ -35,7 +43,7 @@ export default function screenTeeth({ navigation }) {
 
       <View style={styles.slider}>
         <Slider
-          maximumValue={20}
+          maximumValue={30}
           minimumValue={0}
           minimumTrackTintColor="#307ecc"
           maximumTrackTintColor="#000000"

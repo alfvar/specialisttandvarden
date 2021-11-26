@@ -8,9 +8,8 @@ export const MyProvider = ({ children }) => {
     const [isEnabled, setIsEnabled] = React.useState(false);
     const [kariesValue, setkariesValue] = useState(1);
     const [inflamValue, setinflamValue] = useState(1);
-    let defaultTeethImage = require('../assets/teeth2.png')
+    let defaultTeethImage = require('../assets/inflam1.png')
     let sockerklockaImage = require('../assets/sockerklocka.png')
-    let egenvardImage = require('../assets/egenvard.png')
 
     let iconKariesFlow = require('../assets/icons/kariesIcon.png')
     let iconInflamFlow = require('../assets/icons/inflamIcon.png')
@@ -80,7 +79,6 @@ export const MyProvider = ({ children }) => {
             inflamValue, setinflamValue,
             defaultTeethImage,
             sockerklockaImage,
-            egenvardImage,
 
             iconKariesFlow,
             iconInflamFlow,
