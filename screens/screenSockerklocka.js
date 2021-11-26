@@ -10,25 +10,32 @@ const ButtonWithSpin = () => {
   const { sockerklockaImage } = React.useContext(MyContext);
   const { styles } = React.useContext(MyContext);
   const [rotateAnimation, setRotateAnimation] = useState(new Animated.Value(0));
-
+  const [Animationposition, setAnimation] = useState(0);
+  
   const handleAnimation = () => {
     Animated.timing(rotateAnimation, {
-      toValue: "+1",
+      toValue: 1,
       duration: 800,
     }).start(() => {
-      rotateAnimation.setValue("+1");
+      rotateAnimation.setValue(1);
     });
   };
 
-  const interpolateRotating = rotateAnimation.interpolate({
-    inputRange: [0, 1, 2, 3],
-    outputRange: ['0deg', '20deg', '40deg', '60deg'],
+  const interpolateRotating1 = rotateAnimation.interpolate({
+    inputRange: [0, 1],
+    outputRange: ['0deg', '90deg'],
+  });
+
+  const interpolateRotating2 = rotateAnimation.interpolate({
+    inputRange: [0, 1],
+    outputRange: ['90deg', '180deg'],
   });
 
   const animatedStyle = {
+    Animationposition=0?  source={sockerklockaImage}.
     transform: [
       {
-        rotate: interpolateRotating,
+        rotate: interpolateRotating1,
       },
     ],
   };
