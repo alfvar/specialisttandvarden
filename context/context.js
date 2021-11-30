@@ -8,9 +8,8 @@ export const MyProvider = ({ children }) => {
     const [isEnabled, setIsEnabled] = React.useState(false);
     const [kariesValue, setkariesValue] = useState(1);
     const [inflamValue, setinflamValue] = useState(1);
-    let defaultTeethImage = require('../assets/teeth2.png')
+    let defaultTeethImage = require('../assets/inflam1.png')
     let sockerklockaImage = require('../assets/sockerklocka.png')
-    let egenvardImage = require('../assets/egenvard.png')
 
     let iconKariesFlow = require('../assets/icons/kariesIcon.png')
     let iconInflamFlow = require('../assets/icons/inflamIcon.png')
@@ -42,9 +41,10 @@ export const MyProvider = ({ children }) => {
         },
         container: {
             flex: 1,
+            width:"100%",
             alignItems: 'center',
             justifyContent: 'center',
-            backgroundColor: "skyblue",
+            backgroundColor: "#a3d8e7",
         },
         slider: {
             flex: 0.5,
@@ -56,20 +56,25 @@ export const MyProvider = ({ children }) => {
             alignItems: 'center',
             resizeMode: 'contain',
             height: "90%",
-            width: "90%",
+            width: "90%",   
             margin: 15,
-
 
         },
         iconContainer: {
             flex: 1,
             justifyContent: 'center',
             alignItems: 'center',
-
             height: "40%",
 
+        },
+        logo: {
+            flex: 0.2,
+            justifyContent: 'center',
+            alignItems: 'center',
+            resizeMode: "contain",
+            width: 300,
 
-        }
+        },
 
     });
     return (
@@ -80,7 +85,6 @@ export const MyProvider = ({ children }) => {
             inflamValue, setinflamValue,
             defaultTeethImage,
             sockerklockaImage,
-            egenvardImage,
 
             iconKariesFlow,
             iconInflamFlow,
