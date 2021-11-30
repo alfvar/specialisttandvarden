@@ -14,7 +14,7 @@ import screenHome from './screens/screenHome';
 import screenKariesFlow from './screens/screenKariesFlow';
 import screenInflamFlow from './screens/screenInflamFlow';
 import screenEgenvard from './screens/screenEgenvard';
-import screenSockerklocka from './screens/screenSockerklocka';
+//import screenSockerklocka from './screens/screenSockerklocka';
 
 import { MyProvider } from './context/context.js'
 
@@ -30,7 +30,7 @@ export default function App() {
           <Stack.Screen name="Karies" component={screenKariesFlow} />
           <Stack.Screen name="Tandköttsinflammation" component={screenInflamFlow} />
           <Stack.Screen name="Egenvård" component={screenEgenvard} />
-          <Stack.Screen name="Sockerklocka" component={screenSockerklocka} />
+          <Stack.Screen name="Sockerklocka" component={screenHome} />
 
         </Stack.Navigator>
       </NavigationContainer>
