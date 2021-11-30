@@ -44,7 +44,7 @@ export const MyProvider = ({ children }) => {
             width:"100%",
             alignItems: 'center',
             justifyContent: 'center',
-            backgroundColor: "skyblue",
+            backgroundColor: "#a3d8e7",
         },
         slider: {
             flex: 0.5,
@@ -59,7 +59,6 @@ export const MyProvider = ({ children }) => {
             width: "90%",   
             margin: 15,
 
-
         },
         iconContainer: {
             flex: 1,
@@ -67,8 +66,15 @@ export const MyProvider = ({ children }) => {
             alignItems: 'center',
             height: "40%",
 
+        },
+        logo: {
+            flex: 0.2,
+            justifyContent: 'center',
+            alignItems: 'center',
+            resizeMode: "contain",
+            width: 300,
 
-        }
+        },
 
     });
     return (

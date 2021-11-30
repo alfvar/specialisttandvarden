@@ -17,7 +17,7 @@ export default function screenHome({ navigation }) {
   return (
     <View style={styles.container}>
 
-      <View style={{ flex: 1, flexDirection: "row", justifyContent: 'center', alignItems: 'center', width: "100%"}}>
+      <View style={{ flex: 1, flexDirection: "row", justifyContent: 'center', alignItems: 'center', width: "100%" }}>
         <TouchableOpacity
           style={styles.iconContainer}
           onPress={() => {
@@ -46,13 +46,13 @@ export default function screenHome({ navigation }) {
           style={styles.iconContainer}
 
           onPress={() => {
-            navigation.navigate('Sockerklocka');
+            navigation.navigate('Hem');
           }}>
           <Image style={styles.icon} source={iconSockerklocka} />
         </TouchableOpacity>
 
       </View>
-
+          <Image style = {styles.logo} source ={require('../assets/logo.png')}/>
     </View>
 
   );
